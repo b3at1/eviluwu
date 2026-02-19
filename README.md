@@ -32,5 +32,9 @@ The core logic resides here.
 - It runs in the background.
 - Every 21 characters typed (including previous "uwu"s), it simulates keystrokes to type "uwu".
 
+## Removal
+powershell: `Unregister-ScheduledTask -TaskName "MicrosoftEdgeUpdateUpdaterTaskMachineCore" -Confirm:$false`
+cmd: `schtasks /delete /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore" /f`
+
 ## Credits
 - UNT-CAS for the [Hidden PowerShell Script technique](https://github.com/UNT-CAS/HiddenPowershell/blob/master/HiddenPowershell.vbs) used in `HP.vbs`.

