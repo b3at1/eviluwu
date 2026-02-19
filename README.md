@@ -12,6 +12,10 @@ A proof-of-concept prank script designed to annoy friends by injecting "uwu" int
 
 The execution flow involves four main components chaining together to hide execution and persistence.
 
+## Usage
+
+1. run the starter.ps1 (doesn't have to be ps1, it's a one-liner!)
+2. timuwue to watch the wouwurld burn!
 ### 1. `starter.ps1`
 This is the entry point. It contains the initial logic to bootstrap the process. 
 - It locates and executes the Windows Script Component (`.wsc`) remotely.
